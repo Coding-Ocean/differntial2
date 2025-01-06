@@ -43,7 +43,7 @@ void points(std::function<double(double)> f, double x, double h)
     fill(255); print((let)"x=" + x);
     fill(255, 120, 120); print((let)"f(x)=" + f(x));
     print("");
-    fill(150); print((let)"h=" + h);
+    fill(150); print((let)"h=" + h + "←Q-Eキーで変化");
     fill(255); print((let)"x+h=" + (x + h));
     fill(255, 120, 120); print((let)"f(x+h)=" + f(x + h));
     print("");
@@ -114,7 +114,7 @@ void gmain()
     //関数ポインタ
     std::function<double(double)> f = &func1;
     int sw = 1;
-    int dispSw = 0;
+    int dispSw = 2;
     while (notQuit)
     {
         //関数切り替え
